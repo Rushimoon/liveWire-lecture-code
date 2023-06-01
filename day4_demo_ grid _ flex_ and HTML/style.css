@@ -1,0 +1,105 @@
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+  'menu menu main main right right'
+  'menu menu footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+
+
+.item1 {
+    grid-area: myArea;
+  }
+  .item2 {
+    grid-area: yourArea;
+  }
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas: 'myArea '
+                         'myArea myArea yourArea';                 
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+.card{
+    height: 200px;
+    width: 200px;
+    /* border: 3px solid red; */
+    margin: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#maincon{
+    border: 3px solid cyan;
+    height: auto;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 50px;
+    
+}
+.mainimg{
+    width: 150px;
+    height: 100px;
+}
+.ratingimg{
+    width: 50px;
+    height: 25px;
+}
+.block1{
+ /* border: 1px solid black; */
+ padding: 5px;
+ width:180px;
+ margin: auto;
+ height: 25px;
+ display: flex;
+   justify-content:space-between;
+   align-items:center ;
+
+
+}
+.block2{
+    /* border: 1px solid black; */
+    padding: 5px;
+    width: 180px;
+    margin: auto;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+.restname{
+    font-family: Poppins;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1c1c1c;
+}

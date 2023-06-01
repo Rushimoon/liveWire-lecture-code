@@ -1,0 +1,27 @@
+ table ,th,td{
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    border-color: brown;
+  }
+  th,td{
+    /* background-color: aqua; */
+    border-style: dotted;
+    padding: 15px;
+    text-align: center;
+    
+  }
+  tr{
+    height: 50px;
+  }
+  table{
+    border-spacing: 5px;
+  }
+ 
+  /* tr:nth-child(even) {
+    background-color: #0ca4a4;
+  } */
+
+
+  /* td:nth-child(even) ,th:nth-child(even){
+    background-color: bisque;
+  } */

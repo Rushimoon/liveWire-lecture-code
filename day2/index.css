@@ -1,0 +1,44 @@
+*{
+    background-color:;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: justify;
+
+
+}
+
+#hemant{
+    width: 100px;
+    height: 100px;
+   
+    border-radius: 20px;
+    border: 5px dotted rgb(55, 197, 23);
+}
+#margind{
+    width: 500px;
+    height: 500px;
+    border: 2px solid red;
+    margin: auto;
+}
+#changeme{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 200px;
+    font-weight: 200;
+    text-align: left;
+
+}
+.frnd{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: burlywood;
+}
+#container{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    border: 5px solid blue;
+    display:block;
+}
