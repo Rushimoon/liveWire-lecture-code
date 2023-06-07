@@ -39,3 +39,4 @@ desing pattern of  #
 #
 
 write a code for 10 factorial  using loop both while and for  ;
+write a switch case for car washing center where we have differnt types of cars SUV'S ,sedain , tuv , micro suv , hatchback , trucks ;
