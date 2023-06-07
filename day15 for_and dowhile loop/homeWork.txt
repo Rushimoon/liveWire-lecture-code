@@ -1,0 +1,41 @@
+//console 
+
+design a report card of school livewire which contains
+5 subjects and there marks and percentage using concatination .
+
+
+|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+| report card of live wire 
+| -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  name    class
+| school   roll
+|-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+pattern design
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * * * * 
+
+let jhola="";
+
+for(let i=1;i<=7;i++)
+{
+    jhola=jhola+"* ";
+    console.log(jhola);
+}
+
+desing pattern of  #
+# # # # # # #
+# # # # # #
+# # # # #
+# # # #
+# # #
+# #
+#
+
+write a code for 10 factorial  using loop both while and for  ;
