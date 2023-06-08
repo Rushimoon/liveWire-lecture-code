@@ -5,14 +5,8 @@ let car=["volvo","ford","tata","MS","mandra","ford","tata","MS","mandra","ford",
 
 print the pattern 
 use for and if else
-* * * * * *
-*         *
-*         *
-*         *
-*         *
-*         *
-*         *
-*         *
-*         *
-*         *
-* * * * * *
+* * * *  *
+*        *
+*        *
+*        *
+* * * *  *
