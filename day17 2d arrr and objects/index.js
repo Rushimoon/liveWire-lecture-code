@@ -19,6 +19,10 @@ let arr=["car","bike", "elephant","horse","cow","goat"]
 // }
 // console.log(bag);
 
+
+
+
+
 // 2d array
 
 let collection=[["a","b","c"],
@@ -71,3 +75,43 @@ let obj={
     add:"hingna"
 }
 console.log(obj.age)
+
+
+         //    0 1 2 3 4
+// pattern   0 * * * * * 
+        //   1 *       *
+        //   2 *       *
+        //   3 *       *
+        //   4 * * * * *
+
+
+       
+        for(let i=0;i<5;i++)
+        {  let bag="";
+            
+             if(i==0 || i==4)
+             {
+                for(let j=0;j<5;j++)
+                {
+                    bag=bag+"* ";
+                }
+             }
+             else if(i==1||i==2||i==3)
+             {
+                for(let j=0;j<5;j++)
+                {
+                   if(j==1 ||j==2||j==3)
+                   {
+                    bag=bag+"  ";
+                   }else{
+                    bag=bag+"* ";
+                   }
+                }
+             }
+             console.log(bag);
+
+             
+
+        }
+
+       
