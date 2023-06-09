@@ -1,0 +1,22 @@
+let collection=[["a","b","c"],
+                ["d","e","f"],
+                ["g","h","i"],
+                ["j","k","l"]];
+
+ output ->l,k,j,i,h,g,f,e,d,c,b,a ;
+
+
+
+
+
+
+let arr=     [["a","b","c"],
+                ["d","e","f"],
+                ["g","h","i"]];
+
+
+ output ->   a,b,c,e,g,h,i          
+
+
+
+   
