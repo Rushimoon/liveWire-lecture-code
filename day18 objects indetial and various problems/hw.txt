@@ -1,0 +1,38 @@
+mat=[["a","b","c","d","e"],
+     ["f","g","h","i","j"],
+     ["k","l","m","n","o"],
+     ["p","q","r","s","t"],
+     ["u","v","w","x","y"]]
+     
+     5*5
+
+     output-a b c d e i m q u v w x y 
+
+let i=0
+let j=0
+
+let bag="";
+while(j<mat[0].lenght){
+ bag=bag+mat[i][j]+" "  //bag- a b c 
+ j++ ;
+}
+
+
+
+traverse the arr [10,20,30,40,50]
+and print the addition of all elements of arr
+
+traverse the arr [5,10,6,9,85,7,9,2,7]
+and  mul all the elements with 16
+
+
+traverse the arr [10,20,30,40,50]
+and  div all the element by 10
+
+traverse the arr [5,10,6,9,85,7,9,2,7]
+find all even element
+and also odd elements 
+
+
+
+
