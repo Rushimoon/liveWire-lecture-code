@@ -1,0 +1,2 @@
+create a table of 10 with the help of timer multiples should be printed after every 3sex
+print the string "here is table of 10" after 3 sec
