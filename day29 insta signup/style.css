@@ -1,0 +1,36 @@
+#container{
+    width: 25%;
+    height: 600px;
+    border: 1px solid red;
+    margin: auto;
+}
+#logo{
+    margin-top: 20px;
+    border: 1px solid black;
+
+}
+#l-div{
+    width: 150px;
+    height: 80px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+#formdiv{
+    margin-top: 20px;
+    border: 1px solid black;
+}
+#l-img{
+    width: 150px;
+    height: 80px;
+   
+}
+#para1{
+ width: 220px;
+ margin: auto;
+ border: 1px solid red;
+ text-align: center;
+ font-family: "Roboto";
+ font-size: 13px;
+ font-weight:600 ;
+ color: #737373;
+}
