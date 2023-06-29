@@ -1,0 +1,17 @@
+#sform{
+    width: 350px;
+    padding: 10px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: aqua;
+}
+#sform > input{
+    margin: 10px 10px;
+    width: 90%;
+}
+#table{
+    border: 1px solid red;
+}
+#table>tr>td{
+    border: 1px solid red;
+}
