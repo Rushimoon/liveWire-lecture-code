@@ -29,7 +29,28 @@ localStorage.setItem("data",JSON.stringify(arr))
 let datafromlocal = JSON.parse(localStorage.getItem("data")) ;
 console.log(datafromlocal)
 
+// let deti=arr[1];
+// console.log(deti)
 
+let table=document.createElement("table");
+let tr=document.createElement("tr");
+let td1=document.createElement("td")
+    td1.innerText=arr[1].firstName
+let td2=document.createElement("td")
+    td2.innerText=arr[1].lastName
+let td3=document.createElement("td")
+    td3.innerText=arr[1].Email
+let td4=document.createElement("td")
+    td4.innerText=arr[1].password
+let td5=document.createElement("td")
+    td5.innerText=arr[1].mobile
+
+    tr.append(td1,td2,td3,td4,td5);
+    table.append(tr);
+    console.log(table)
+ 
+let wqewqeqw=document.getElementById("table_div");
+wqewqeqw.append(table)
 
 
 
