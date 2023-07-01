@@ -1,0 +1,2 @@
+create a banking system for sbi where customer data to be shown in table format when enterd by user the data should contain foll detials username,password, accountno,address,mobile number etc .
+  

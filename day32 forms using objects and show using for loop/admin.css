@@ -1,0 +1,12 @@
+#table{
+    border: 1px solid red;
+}
+#table>tr>td{
+    border: 1px solid red;
+}
+#table>th>td{
+    border: 1px solid red;
+}
+td{
+    border: 2px solid blue;
+}
