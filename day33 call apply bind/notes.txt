@@ -1,0 +1,357 @@
+JavaScript Function call()
+Method Reuse
+With the call() method, you can write a method that can be used on different objects.
+
+All Functions are Methods
+In JavaScript all functions are object methods.
+
+If a function is not a method of a JavaScript object, it is a function of the global object (see previous chapter).
+
+The example below creates an object with 3 properties, firstName, lastName, fullName.
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+// This will return "John Doe":
+person.fullName();  
+In the example above, this refers to the person object.
+
+this.firstName means the firstName property of this.
+
+Same as:
+
+this.firstName means the firstName property of person.
+
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+============================================================================================================
+Method Reuse
+With the apply() method, you can write a method that can be used on different objects.
+
+The JavaScript apply() Method
+The apply() method is similar to the call() method (previous chapter).
+
+In this example the fullName method of person is applied on person1:
+
+Example
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person1 = {
+  firstName: "Mary",
+  lastName: "Doe"
+}
+
+// This will return "Mary Doe":
+person.fullName.apply(person1);
+
+The Difference Between call() and apply()
+The difference is:
+
+The call() method takes arguments separately.
+
+The apply() method takes arguments as an array.
+
+The apply() method is very handy if you want to use an array instead of an argument list.
+
+The apply() Method with Arguments
+The apply() method accepts arguments in an array:
+
+Example
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+
+Compared with the call() method:
+
+Example
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+
+person.fullName.call(person1, "Oslo", "Norway");
+
+ADVERTISEMENT
+
+Simulate a Max Method on Arrays
+You can find the largest number (in a list of numbers) using the Math.max() method:
+
+Example
+Math.max(1,2,3);  // Will return 3
+
+Since JavaScript arrays do not have a max() method, you can apply the Math.max() method instead.
+
+Example
+Math.max.apply(null, [1,2,3]); // Will also return 3
+
+The first argument (null) does not matter. It is not used in this example.
+
+These examples will give the same result:
+
+Example
+Math.max.apply(Math, [1,2,3]); // Will also return 3
+============================================================================================
+Function Borrowing
+With the bind() method, an object can borrow a method from another object.
+
+The example below creates 2 objects (person and member).
+
+The member object borrows the fullname method from the person object:
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+Preserving this
+Sometimes the bind() method has to be used to prevent losing this.
+
+In the following example, the person object has a display method. In the display method, this refers to the person object:
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+person.display();
+When a function is used as a callback, this is lost.
+
+This example will try to display the person name after 3 seconds, but it will display undefined instead:
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+setTimeout(person.display, 3000);
+The bind() method solves this problem.
+
+In the following example, the bind() method is used to bind person.display to person.
+
+This example will display the person name after 3 seconds:
+
+Example
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+let display = person.display.bind(person);
+setTimeout(display, 3000);
+========================================================================================================
+JavaScript Closures
+JavaScript variables can belong to the local or global scope.
+
+Global variables can be made local (private) with closures.
+
+Global Variables
+A function can access all variables defined inside the function, like this:
+
+Example
+function myFunction() {
+  let a = 4;
+  return a * a;
+}
+But a function can also access variables defined outside the function, like this:
+
+Example
+let a = 4;
+function myFunction() {
+  return a * a;
+}
+In the last example, a is a global variable.
+
+In a web page, global variables belong to the page.
+
+Global variables can be used (and changed) by all other scripts in the page.
+
+In the first example, a is a local variable.
+
+A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.
+
+Global and local variables with the same name are different variables. Modifying one, does not modify the other.
+
+Note
+Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+Example
+function myFunction() {
+  a = 4;
+}
+ADVERTISEMENT
+
+Variable Lifetime
+Global variables live until the page is discarded, like when you navigate to another page or close the window.
+
+Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.
+
+A Counter Dilemma
+Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.
+
+You could use a global variable, and a function to increase the counter:
+
+Example
+// Initiate counter
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+// The counter should now be 3
+There is a problem with the solution above: Any code on the page can change the counter, without calling add().
+
+The counter should be local to the add() function, to prevent other code from changing it:
+
+Example
+// Initiate counter
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  let counter = 0;
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+//The counter should now be 3. But it is 0
+It did not work because we display the global counter instead of the local counter.
+
+We can remove the global counter and access the local counter by letting the function return it:
+
+Example
+// Function to increment counter
+function add() {
+  let counter = 0;
+  counter += 1;
+  return counter;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+//The counter should now be 3. But it is 1.
+It did not work because we reset the local counter every time we call the function.
+
+ A JavaScript inner function can solve this.
+
+JavaScript Nested Functions
+All functions have access to the global scope.  
+
+In fact, in JavaScript, all functions have access to the scope "above" them.
+
+JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+
+In this example, the inner function plus() has access to the counter variable in the parent function:
+
+Example
+function add() {
+  let counter = 0;
+  function plus() {counter += 1;}
+  plus();   
+  return counter;
+}
+This could have solved the counter dilemma, if we could reach the plus() function from the outside.
+
+We also need to find a way to execute counter = 0 only once.
+
+We need a closure.
+
+JavaScript Closures
+Remember self-invoking functions? What does this function do?
+
+Example
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+add();
+add();
+add();
+
+// the counter is now 3
+Example Explained
+The variable add is assigned to the return value of a self-invoking function.
+
+The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.
+
+This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+
+This is called a JavaScript closure. It makes it possible for a function to have "private" variables.
+
+The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
+
+A closure is a function having access to the parent scope, even after the parent function has closed.
