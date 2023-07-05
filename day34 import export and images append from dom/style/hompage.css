@@ -1,0 +1,129 @@
+#navbar{
+    width: 100%;
+    height: 70px;
+    background-color: #2874f0;
+    display: flex;
+    padding: 0px 150px;
+    align-items: center;
+}
+
+.b1a>img{
+    width: 80px;
+    height: 20px;
+    margin-top: 10px;
+}
+.b1b{
+    width: 80px;
+    height: 15px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.ex{
+    text-decoration: none;
+    font-family: Roboto ;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    font-style: italic;
+    color: #f0f0f0;
+}
+.pl{
+    text-decoration: none;
+    font-family: Roboto ;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    font-style: italic;
+    color: #ffe500;
+}
+a+img{
+    width: 15px;
+    height: 15px;
+}
+#block2{
+   display: flex;
+   align-items: center;
+   /* border: 1px solid red;  */
+   width: 400px;
+   padding: 0px 20px;
+   
+}
+.bl2a{
+    width: 400px;
+    height: 30px;
+    border: 0;
+    font-family: Roboto ;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color:#000000;
+    padding-left: 15px;
+    
+}
+.bl2b{
+    width: 30px;
+    height: 32px;
+    border: 0;
+
+}
+.login{
+    width: 120px;
+    height: 30px;
+    margin: 18px 20px;
+    font-family: Roboto ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:20px;
+    font-style: normal;
+    color:#2874f0;
+}
+.link1{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    font-family: Roboto ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:20px;
+    font-style: normal;
+    color:#ffffff;
+    margin-left: 15px;
+   
+}
+.link2{
+    /* border: 1px solid red; */
+    margin: 50px;
+    align-items: center;
+    text-decoration: none;
+    font-family: Roboto ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:20px;
+    font-style: normal;
+    color:#ffffff;
+    
+}
+#block6{
+    /* border: 1px solid red; */
+    width: 80px;
+    height: 20px;
+    margin: 20px ;
+    font-family: Roboto ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:20px;
+    font-style: normal;
+    color:#ffffff;
+    
+    
+}
+.link3{
+    text-decoration: none;
+    font-family: Roboto ;
+    font-size: 16px;
+    font-weight: 500;
+    line-height:20px;
+    font-style: normal;
+    color:#ffffff;
+    
+}
