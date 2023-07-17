@@ -1,0 +1,14 @@
+#card{
+    border: 2px solid black;
+    width: 250px;
+    height: 500px;
+    text-align: center;
+}
+#poster{
+    margin: auto;
+    width:240px ;
+}
+#title
+{
+color: blue;
+}
