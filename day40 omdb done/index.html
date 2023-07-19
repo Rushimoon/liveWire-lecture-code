@@ -8,7 +8,7 @@
 </head>
 <body>
     
-     <input type="text" id="input" placeholder="enter movie name" >
+     <input type="text" id="input" oninput=" debounce(submited,5000) " placeholder="enter movie name" >
      <button onclick="submited()">submit</button>
 
      <!-- <div id="card" >
