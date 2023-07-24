@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "onePlus",
+      "productPrice": "17000",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/w/k/-original-imagg2abzhxjckxu.jpeg?q=70"
+    },
+    {
+      "id": "_CGGeFz",
+      "productName": "onplus2T",
+      "productPrice": "28000",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/f/a/v/-original-imagfx6b9shazw8u.jpeg?q=70"
+    },
+    {
+      "id": "6",
+      "productName": "i phone14 rose",
+      "productPrice": "60000",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70"
+    },
+    {
+      "id": "9",
+      "productName": "",
+      "productPrice": "123213",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/8/z/w/iphone-13-mlph3hn-a-apple-original-imag6vzzhrxgazsg.jpeg?q=70"
+    }
+  ]
+}
