@@ -1,3 +1,5 @@
+ const baseUrl =`http://localhost:3000/products`
+
 
 let containerdiv=document.getElementById("containerdiv");
 window.onload = submited();
@@ -7,7 +9,7 @@ async function submited(){
    
    try{
     
-    let mydata= await fetch("http://localhost:3000/products")
+    let mydata= await fetch(`${baseUrl}`)
     console.log(mydata)
 
    //  console.log(mydata)
@@ -56,8 +58,8 @@ async function showWomensData(){
    
     try{
      
-     let mydata= await fetch("http://localhost:3000/products?Category=womens")
-     console.log(mydata)
+     let mydata= await fetch(`${baseUrl}?Category=womens`)
+   //   console.log(mydata)
  
     //  console.log(mydata)
      let finaldata= await mydata.json(); 
@@ -70,6 +72,49 @@ async function showWomensData(){
       }
 
 
+
+
+}
+
+async function sort_lth(){
+
+   containerdiv.innerHTML="";
+   
+   try{
+    
+    let mydata= await fetch(`${baseUrl}?_sort=productPrice&_order=asc`)
+    console.log(mydata)
+
+   //  console.log(mydata)
+    let finaldata= await mydata.json(); 
+    console.log(finaldata)   
+    finaldata.forEach(display)
+  
+     }
+     catch{
+        console.log("eror")
+     }
+
+
+}
+async function sort_htl(){
+
+   containerdiv.innerHTML="";
+   
+   try{
+    
+    let mydata= await fetch(`${baseUrl}?_sort=productPrice&_order=desc`)
+    console.log(mydata)
+
+   //  console.log(mydata)
+    let finaldata= await mydata.json(); 
+    console.log(finaldata)   
+    finaldata.forEach(display)
+  
+     }
+     catch{
+        console.log("eror")
+     }
 
 
 }

@@ -1,8 +1,9 @@
+const baseUrl=`http://localhost:3000/products`;
 
-let data=localStorage.setItem("moviedata",JSON.stringify([{"Title":"Captain Marvel","Year":"2019","imdbID":"tt4154664","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg"},{"Title":"Ms. Marvel","Year":"2022","imdbID":"tt10857164","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BZmQ3OTZkNDUtNTU0Mi00ZjE4LTgyNTUtY2E4NWRmNDUxMzkyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: Agent Carter","Year":"2013","imdbID":"tt3067038","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZDIwZTM4M2QtMWFhYy00N2VmLWFlMjItMzI3NjBjYTc0OTMxXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: All Hail the King","Year":"2014","imdbID":"tt3438640","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZGFkMTZkMDQtNzM4Yy00YWEwLTkzOWEtZTMyNDRlNmJhYWJhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: Item 47","Year":"2012","imdbID":"tt2247732","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMjNlMzAxNmQtOGEwZi00NTEyLWI0NWYtMTlhNmE2YTA3ZDVhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer","Year":"2011","imdbID":"tt2011109","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BYmVlYTg3N2QtMWM2OS00YWQyLWI2M2MtMDc0ZjBkZjk1MTY3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: The Consultant","Year":"2011","imdbID":"tt2011118","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BNGE4YjU5MDAtYzYzMC00M2RlLTk0NDgtNDU1MjgyMGI0MjI3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel Studios: Legends","Year":"2021–","imdbID":"tt13650480","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BMzdiNGVlZGYtMGY1Ni00OGU1LTlmYzEtZDBjYjk3OGM3YTNkXkEyXkFqcGdeQXVyNzk3NDUzNTc@._V1_SX300.jpg"},{"Title":"Marvel Studios: Assembled","Year":"2021–","imdbID":"tt14094206","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BNWMyNWYyMmYtZjNiZi00MzFmLTg2MjYtYWEzZWY1MzBhY2I2XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Lego Marvel Super Heroes","Year":"2013","imdbID":"tt2620204","Type":"game","Poster":"https://m.media-amazon.com/images/M/MV5BOTA5ODA2NTI2M15BMl5BanBnXkFtZTgwNTcxMzU1MDE@._V1_SX300.jpg"},]))
+// let data=localStorage.setItem("moviedata",JSON.stringify([{"Title":"Captain Marvel","Year":"2019","imdbID":"tt4154664","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg"},{"Title":"Ms. Marvel","Year":"2022","imdbID":"tt10857164","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BZmQ3OTZkNDUtNTU0Mi00ZjE4LTgyNTUtY2E4NWRmNDUxMzkyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: Agent Carter","Year":"2013","imdbID":"tt3067038","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZDIwZTM4M2QtMWFhYy00N2VmLWFlMjItMzI3NjBjYTc0OTMxXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: All Hail the King","Year":"2014","imdbID":"tt3438640","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BZGFkMTZkMDQtNzM4Yy00YWEwLTkzOWEtZTMyNDRlNmJhYWJhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: Item 47","Year":"2012","imdbID":"tt2247732","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BMjNlMzAxNmQtOGEwZi00NTEyLWI0NWYtMTlhNmE2YTA3ZDVhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer","Year":"2011","imdbID":"tt2011109","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BYmVlYTg3N2QtMWM2OS00YWQyLWI2M2MtMDc0ZjBkZjk1MTY3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel One-Shot: The Consultant","Year":"2011","imdbID":"tt2011118","Type":"movie","Poster":"https://m.media-amazon.com/images/M/MV5BNGE4YjU5MDAtYzYzMC00M2RlLTk0NDgtNDU1MjgyMGI0MjI3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Marvel Studios: Legends","Year":"2021–","imdbID":"tt13650480","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BMzdiNGVlZGYtMGY1Ni00OGU1LTlmYzEtZDBjYjk3OGM3YTNkXkEyXkFqcGdeQXVyNzk3NDUzNTc@._V1_SX300.jpg"},{"Title":"Marvel Studios: Assembled","Year":"2021–","imdbID":"tt14094206","Type":"series","Poster":"https://m.media-amazon.com/images/M/MV5BNWMyNWYyMmYtZjNiZi00MzFmLTg2MjYtYWEzZWY1MzBhY2I2XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"},{"Title":"Lego Marvel Super Heroes","Year":"2013","imdbID":"tt2620204","Type":"game","Poster":"https://m.media-amazon.com/images/M/MV5BOTA5ODA2NTI2M15BMl5BanBnXkFtZTgwNTcxMzU1MDE@._V1_SX300.jpg"},]))
 //console.log(data)
-let normaldata=JSON.parse(localStorage.getItem("moviedata"));
-console.log(normaldata);
+// let normaldata=JSON.parse(localStorage.getItem("moviedata"));
+// console.log(normaldata);
 async function getdata()
 {
 event.preventDefault()
@@ -20,7 +21,7 @@ let obj={
    productImg
 }
 //post or add data to data base
- await fetch(`http://localhost:3000/products`,{
+ await fetch(`${baseUrl}`,{
     method:"POST",
     body:JSON.stringify(obj),
     headers:{
@@ -41,21 +42,8 @@ async function updateData()
    console.log(selectedvalue);
    let new_value=document.getElementById("upvalue").value;
    console.log(selectedvalue+"          "+new_value)
-// event.preventDefault()
-// let productUpdateform=document.getElementById("productUpdate_form");
-// let id=productUpdateform.nid.value;
-// let productName=productUpdateform.productName.value;
-// let productPrice=productUpdateform.productPrice.value
-// let productImg=productUpdateform.productImage.value
-// let obj={
-//    id,
-//    productName,
-//    productPrice,
-//    productImg
-// }
-// console.log(obj);
-// post or add data to data base
- await fetch(`http://localhost:3000/products/${prodid}`,{
+
+ await fetch(`${baseUrl}/${prodid}`,{
     method:"PATCH",
     body:JSON.stringify({selectedvalue:new_value}),
     headers:{
@@ -79,7 +67,7 @@ async function deletedata(){
 
    let delid=document.getElementById("deleteid").value;
 
-   await fetch(`http://localhost:3000/products/${delid}`,{
+   await fetch(`${baseUrl}/${delid}`,{
       method:"DELETE",
     
   })
