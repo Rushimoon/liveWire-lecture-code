@@ -139,6 +139,20 @@
       "productPrice": 123455,
       "Category": "mobiles",
       "productImg": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/f/a/v/-original-imagfx6b9shazw8u.jpeg?q=70"
+    },
+    {
+      "id": "50",
+      "productName": "monitor",
+      "productPrice": 10000,
+      "Category": "electronics",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/ko8xtow0/monitor/t/a/y/d24-20-66aekac1in-lenovo-original-imag2qwzazcdmqtb.jpeg?q=70"
+    },
+    {
+      "id": "60",
+      "productName": "mi tv",
+      "productPrice": 84184,
+      "Category": "electronics",
+      "productImg": "https://rukminim2.flixcart.com/image/416/416/l2ghgnk0/television/u/a/c/l32m7-5ain-mi-original-imagdsdwqf6bkmkz.jpeg?q=70"
     }
   ],
   "inventory": [

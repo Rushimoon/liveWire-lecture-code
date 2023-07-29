@@ -2,7 +2,9 @@
 
 
 let containerdiv=document.getElementById("containerdiv");
-window.onload = submited();
+//loads the result a soon as window loads
+
+window.onload = paginate(1);
 
 async function submited(){
    containerdiv.innerHTML="";
@@ -117,4 +119,21 @@ async function sort_htl(){
      }
 
 
+}
+
+ async function paginate(value){
+   try{
+      containerdiv.innerHTML="";
+      let mydata= await fetch(`${baseUrl}?_page=${value}&_limit=10`)
+    //   console.log(mydata)
+  
+     //  console.log(mydata)
+      let finaldata= await mydata.json(); 
+      console.log(finaldata)   
+      finaldata.forEach(display)
+    
+       }
+       catch{
+          console.log("eror")
+       }
 }
