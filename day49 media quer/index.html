@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./mywebsite/landing.html">go to website</a>
+ <h1>post the obj in database</h1>   
+post the obj in database
+
+<form action="" id="product_form">
+<input type="number" name="nid" id="id"  type="number" placeholder="enter id">
+<input type="text" name="productName"  id="pn" placeholder="Enter the product name">
+<input type="number" name="productPrice" id="prodPrice" placeholder="product price">
+<input type="text" name="productImage" id="prodImg" placeholder="Enter product image">
+<input type="text" name="category" id="category" placeholder="product category">
+<input type="submit" onclick="getdata()">
+</form>
+
+
+<h1>update the objects</h1>
+
+<form action="" id="productUpdate_form">
+    <input type="number" name="nid" id="id"  type="number" placeholder="enter id">
+    <input type="text" name="productName"  id="pn" placeholder="Enter the product name">
+    <input type="number" name="productPrice" id="prodPrice" placeholder="product price">
+    <input type="text" name="productImage" id="prodImg" placeholder="Enter product image">
+    <input type="submit" onclick="updateData()">
+    </form>
+<!-- <div id="moon"></div>
+<div class="moon"></div> -->
+   <select name="select" id="selectTag" >
+    <option value="productName">product name</option>
+    <option value="productPrice">product price</option>
+    <option value="productImg">product image</option>
+   </select>
+   <input type="number" placeholder="enter the id of product"  id="prodid">
+   <input type="text" placeholder="enter value to be update" id="upvalue">;
+   <button onclick=" updateData()">update value</button>
+
+
+<h3>delete items</h3>
+<input type="text" id="deleteid" placeholder="deleteitems">
+<button onclick="deletedata()">click to delete</button>
+
+
+</body>
+
+
+
+</html>
+<script src="./script.js"></script>
