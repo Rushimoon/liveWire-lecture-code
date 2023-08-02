@@ -1,12 +1,15 @@
 .dropdown{
     border: 1px solid red;
     background-color: aqua;
+    /* position: relative; */
+    width: 100px;
 
 }
 .dropbtn{
     background-color: aqua;
     width: 100px ;
-    height: 50px;  
+    height: 50px; 
+     
 }
 
 .dropdown-content{
@@ -25,7 +28,7 @@
 {
     display: block;
     border: 1px solid red;
-    position: relative;
+    /* position: relative; */
 }
 
 #container2{

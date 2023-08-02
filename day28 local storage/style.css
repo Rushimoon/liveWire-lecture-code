@@ -9,3 +9,9 @@
     margin: 10px 10px;
     width: 90%;
 }
+#table{
+    border: 1px solid red;
+}
+#table>tr>td{
+    border: 1px solid red;
+}

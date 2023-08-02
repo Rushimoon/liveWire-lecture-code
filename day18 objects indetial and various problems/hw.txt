@@ -34,5 +34,9 @@ find all even element
 and also odd elements 
 
 
-
+let even=""
+if(arr[i]%2!=0)
+{
+   even+=arr[i];
+}
 

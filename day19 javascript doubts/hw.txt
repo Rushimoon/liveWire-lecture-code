@@ -1,0 +1,28 @@
+let mat= [ ["a","b","c","d","e"], 
+           ["f","g","h","i","j"],
+           ["k","l","m","n","o"],
+           ["p","q","r","s","t"],
+           ["u","v","w","x","y"]]
+
+
+
+ traverse z 
+ output - e d c b a g m s y x w v u 
+
+ output -abcde joty xwvu 
+
+// if else
+ num1=25
+ num2 =65
+ num3 =20
+ 
+
+ if num1 is greater than num2 print num1 is greate
+ if num2 is greater than num1 print num2 is greate
+ if addition  of num1 and num2 is greater than num 3  print "addition num1 and num2  is greater than num3"
+
+
+
+
+ 
+

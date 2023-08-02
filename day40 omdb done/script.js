@@ -42,8 +42,8 @@ container.append(card)
 let id;
 function debounce(func,delay){
 
-  ifgit d){
-   clearTimeout()
+  if(id){
+   clearTimeout
   }
 
  id=setTimeout(function(){

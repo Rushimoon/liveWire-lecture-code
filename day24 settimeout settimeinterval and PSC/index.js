@@ -1,5 +1,5 @@
-////setInterval;
-////setTimeout;
+// //setInterval;
+// //setTimeout;
 
 // let  j=0;
 // setInterval(function(){
@@ -40,14 +40,20 @@
 // create a time out which should  print "my first timer after 3 sec"
 
 
-setInterval(function(){
+// setInterval(function(){
    
-    console.log("Pratiksha")
-},2000);
-// =========================================
+//     console.log("Pratiksha")
+// },2000);
+// // =========================================
+
+// setTimeout(function(){
+//     console.log("my first timer")
+
+// },3000);
+
+
+
 
 setTimeout(function(){
-    console.log("my first timer")
-
-},3000);
-
+    console.log("samiksha")
+},10000);

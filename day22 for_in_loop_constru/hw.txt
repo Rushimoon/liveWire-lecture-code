@@ -1,4 +1,0 @@
-create a class name Sbibank  which includes bank name , bank address, bank branch, bank ifsc code
-create a class name custmer which inherit class Sbibank and  its properties and which contains customer detials 
-as customer name , customer address, customer account number, customer balance etc .
-print the object of class customer
