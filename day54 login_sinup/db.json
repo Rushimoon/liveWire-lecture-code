@@ -1,0 +1,31 @@
+{
+  "signup_user_detials": [
+    {
+      "name": "rushi",
+      "lname": "moon",
+      "mobile": "978654321",
+      "gender": "male",
+      "email": "rushikeshmoon1998@gmail.com",
+      "password":"123456",
+      "id": 1
+    },
+    {
+      "name": "vaibhav",
+      "lname": "narnaware",
+      "mobile": "9856427785",
+      "gender": "male",
+      "email": "vnaa@gmail.com",
+      "password":"126",
+      "id": 2
+    },
+    {
+      "name": "hemant",
+      "lname": "ghormade",
+      "mobile": "852741963",
+      "gender": "male",
+      "email": "hg@gmail",
+      "password":"123456",
+      "id": 3
+    }
+  ]
+}
