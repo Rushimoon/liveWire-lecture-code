@@ -1,7 +1,7 @@
 import React from 'react'
-import counter from './counter'
 
-export default function Navbar(props) {
+
+ function Navbar(props) {
   return (
 <>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,10 +13,10 @@ export default function Navbar(props) {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">{props.home}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">{props.apple}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -24,7 +24,7 @@ export default function Navbar(props) {
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another {props.data} action</a></li>
+            <li><a class="dropdown-item" href="#">Another {props.home} action</a></li>
             <li><hr class="dropdown-divider"/></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
@@ -48,5 +48,16 @@ export default function Navbar(props) {
  
    
   )
+
 }
+
+Navbar.defaultProps={
+  title:"hrmant",
+  home:"vaibhav",
+  data:"qweqwe",
+  apple:"this is a brand of iphone"
+}
+
+
+export default Navbar;
 
