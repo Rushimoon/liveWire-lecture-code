@@ -5,6 +5,7 @@ function Form(){
     const [array,setArray] =useState([]);
     console.log(array)
   const handleChange = (event) => {
+    console.log(event);
     const name = event.target.name;
     const value = event.target.value;
     // console.log(name+" "+value)
@@ -18,9 +19,10 @@ function Form(){
     console.log(inputs)
     setArray(values => [...array,inputs] ) ;
     
-
+   setInputs({});
     // alert(inputs);
   }
+  console.log(array)
   
     return(
         <form onSubmit={handleSubmit}>

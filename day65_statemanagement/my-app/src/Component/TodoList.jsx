@@ -26,7 +26,7 @@ return(
     <div>
       <input placeholder="enter the task to perform"  type="text" name="" id="" value={text} onChange={changetext} />
       <button  onClick={handleClick}>button</button>
-       <ul>
+       <ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                      
        {todos.map((el)=>{
                 return (
                 
