@@ -5,11 +5,12 @@ import React from 'react'
 export default function ContainerCard() {
    const containerStyles={
     width:"80%",
-    height:"1000px",
+    height:"auto",
     border:"3px solid red",
     margin:"auto",
     display:"grid",
-    
+    gridTemplateColumns:"repeat(4,1fr)",
+    gap:"50px"   
      
     
    }
@@ -147,7 +148,7 @@ export default function ContainerCard() {
     )})
 
     return (
-    <div  style={containerStyles } >
+    <div  style={containerStyles} >
 
       
         {finaldata}
