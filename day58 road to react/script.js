@@ -49,3 +49,13 @@ function tellme(n){
 
 
 console.log(tellme(20))
+
+let arr=["ford","ns220","activa"];
+// let car=arr[0];
+// let bike=arr[1];
+// let mopet=arr[2];
+let [qweqwe,apple]=["ford","ns220","activa"]
+console.log(apple)
+// let [car,bike,mopet]=arr;
+let mynewParking=[...arr,"tata"];
+ console.log(mynewParking)

@@ -4,6 +4,9 @@ import Button from './component/Button';
 import Card1 from './component/Card1';
 import Carouseal from './component/Carouseal';
 import Avtar from './component/Avtar'
+import React from 'react';
+import Todo from './component/Todo';
+import Counter from './component/Counter'
 
 // function Button(){
 //   return (
@@ -36,6 +39,9 @@ const arr=[
       width:"250px"
    }
 ]
+
+
+
 
 let finaldata=arr.map((el)=>{
    return(
@@ -75,7 +81,8 @@ function App() {
        
 
        {finaldata}
-     
+       <Todo/>
+       <Counter/>
      </>
      
   );
