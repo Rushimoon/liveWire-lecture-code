@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'; 
+import Postsitem from './Postsitem';
 const getData=(url)=>{
     return fetch(url).then((res)=>res.json())
     
@@ -16,12 +17,12 @@ function Posts() {
 try {
     setLoading(true);
     const data=await getData(
-        `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=7` 
+        `https://jsonplaceholder.typicode.com/posts?_limit=20` 
         )
         console.log(data)
         setPosts(data);
         setLoading(false);
-        console.log(data)
+     
 
 } catch (error) {
     
@@ -48,7 +49,22 @@ if(loading){
         <hr />
        
     <div>
-      {fetchAndUpdateData()}
+    <button onClick={()=>{fetchAndUpdateData()}}>click here to get data</button>
+      
+      <div>
+
+         {
+            posts.map((el)=>{
+                return(
+                    <Postsitem body={el.body} id={el.id} title={el.title}/>
+                    
+                )
+            })
+         }
+
+
+      </div>
+
     </div>
        </>
         
