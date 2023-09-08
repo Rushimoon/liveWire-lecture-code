@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'; 
 import Postsitem from './Postsitem';
 const getData=(url)=>{
     return fetch(url).then((res)=>res.json())
     
     }
+const buttonStyle={
+    border:"2px solid cyan",
+    display:"flex",
+    justifyContent:"space-around"
+
+
+}
 function Posts() {
   
     const [loading,setLoading]=useState(false); 
     const [posts,setPosts]=useState([]);
     const [err,setErr]=useState(false);
+    const [page,setpage]=useState(1);
+   
+    useEffect(()=>{
+        fetchAndUpdateData(page)
+        console.log("inside")
+   },[page])
 
-
- const  fetchAndUpdateData=async ()=>{
+ const  fetchAndUpdateData=async (page)=>{
 
 try {
     setLoading(true);
     const data=await getData(
-        `https://jsonplaceholder.typicode.com/posts?_limit=20` 
+        `https://jsonplaceholder.typicode.com/posts?_page=${page}}` 
         )
         console.log(data)
         setPosts(data);
@@ -43,13 +55,19 @@ if(loading){
 
  }
 
+ function handlePage(change){
+    let currpage=setpage(page+change)
+    console.log(currpage)
+ 
+ }
+
     return (
        <>
        <h1>Posts</h1>
         <hr />
        
     <div>
-    <button onClick={()=>{fetchAndUpdateData()}}>click here to get data</button>
+    {/* <button onClick={()=>{fetchAndUpdateData()}}>click here to get data</button> */}
       
       <div>
 
@@ -64,7 +82,12 @@ if(loading){
 
 
       </div>
-
+        
+    </div>
+    <div style={buttonStyle} >
+        <button disabled={page<=1?true:false} onClick={()=>{handlePage(-1)}}>prev</button>
+        <h1>{page}</h1>
+        <button disabled={page>=10?true:false} onClick={()=>{handlePage(+1)}} >next</button>
     </div>
        </>
         
