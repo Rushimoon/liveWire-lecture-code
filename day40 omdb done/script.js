@@ -2,19 +2,9 @@ let container=document.getElementById("container");
 async function submited(){
    container.innerHTML="";
    let inputval=document.getElementById("input").value;
-   try{
-    
-    let mydata= await fetch(`https://www.omdbapi.com/?s=${inputval}&apikey=82dd9e8`)
-
-   //  console.log(mydata)
-    let finaldata= await mydata.json(); 
-   //  console.log(finaldata.S)   
-    finaldata.Search.forEach(display)
-  
-     }
-     catch{
-        console.log("eror")
-     }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       console.warn(
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       );
 
 }
 
