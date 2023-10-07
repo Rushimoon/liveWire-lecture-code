@@ -27,13 +27,86 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
   const StudentList = new mongoose.model("student",studentSchema)
   // this  is a class 
   // first parameter will be name of the class
-  const std1=new StudentList({
-     
-    name:"rushikesh",
-    email:"Rm@gmial.com",
-    mobile:987541344,
-    course:"fsd",
-    status:true
 
-  })
-  std1.save()
+   const  addData=async ()=>{
+    const std1=new StudentList({
+     
+      name:"sonali",
+      email:"sc@gmial.com",
+      mobile:9764541344,
+      course:"java",
+      status:true
+  
+    })
+    const std2=new StudentList({
+     
+      name:"vaibhav",
+      email:"vn@gmial.com",
+      mobile:908764541344,
+      course:"c++",
+      status:true
+  
+    })
+    const std6=new StudentList({
+     
+      name:"vaibhav",
+      email:"vn@gmial.com",
+      mobile:908764541344,
+      course:"c++",
+      status:true
+  
+    })
+    const std3=new StudentList({
+     
+      name:"jagriti",
+      email:"jg@gmial.com",
+      mobile:9764541344,
+      course:"wd",
+      status:true
+  
+    })
+
+    const std4=new StudentList({
+     
+      name:"rutuja",
+      email:"rj@gmial.com",
+      mobile:908764541344,
+      course:"c++",
+      status:true
+  
+    })
+    const std5=new StudentList({
+     
+      name:"pratiksh",
+      email:"pk@gmial.com",
+      mobile:234541344,
+      course:"fswd",
+      status:true
+  
+    })
+
+   let result = await  StudentList.insertMany([std1,std2,std3,std4,std5,std6])
+   }
+
+
+   addData()
+    
+
+
+
+  //  const getData=async ()=>{
+  //   let result = await  StudentList.find({course:"java"})
+  //   console.log(result)
+  //  }
+  //  const getData=async ()=>{
+  //   let result = await  StudentList.findOne({course:"java"})
+  //   console.log(result)
+  //  }
+  const getData=async ()=>{
+    let result = await  StudentList.find({course:"c++"}).limit(5)
+    console.log(result)
+   }
+
+
+
+   getData()
