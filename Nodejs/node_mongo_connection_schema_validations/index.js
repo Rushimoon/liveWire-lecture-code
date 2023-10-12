@@ -17,71 +17,78 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
         email:String,
         mobile:Number,
         course:String,
-        status:Boolean
+        status:Boolean,
+        score:Number
     }
   )
   //mongoose model is a wrapper  on the mongoose schema provides an interface to the database 
   // for creating , quering , updating ,del the record etc
  
    
-  const StudentList = new mongoose.model("student",studentSchema)
+  const StudentList = new mongoose.model("celeb",studentSchema)
   // this  is a class 
   // first parameter will be name of the class
 
    const  addData=async ()=>{
     const std1=new StudentList({
      
-      name:"sonali",
+      name:"sharukh",
       email:"sc@gmial.com",
       mobile:9764541344,
       course:"java",
-      status:true
+      status:true,
+      score:50
   
     })
     const std2=new StudentList({
      
-      name:"vaibhav",
+      name:"salman",
       email:"vn@gmial.com",
       mobile:908764541344,
       course:"c++",
-      status:true
+      status:true,
+      score:65
   
     })
     const std6=new StudentList({
      
-      name:"vaibhav",
+      name:"saif",
       email:"vn@gmial.com",
       mobile:908764541344,
       course:"c++",
-      status:true
+      status:true,
+      score:40
   
     })
     const std3=new StudentList({
      
-      name:"jagriti",
+      name:"akashy",
       email:"jg@gmial.com",
       mobile:9764541344,
       course:"wd",
-      status:true
+      status:true,
+      score:70
   
     })
 
     const std4=new StudentList({
      
-      name:"rutuja",
+      name:"varun",
       email:"rj@gmial.com",
       mobile:908764541344,
       course:"c++",
-      status:true
+      status:true,
+      score:85
   
     })
     const std5=new StudentList({
      
-      name:"pratiksh",
+      name:"jon",
       email:"pk@gmial.com",
       mobile:234541344,
       course:"fswd",
-      status:true
+      status:true,
+      score:70
   
     })
 
@@ -89,7 +96,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
    }
 
 
-   addData()
+  //  addData()
     
 
 
@@ -102,11 +109,34 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
   //   let result = await  StudentList.findOne({course:"java"})
   //   console.log(result)
   //  }
-  const getData=async ()=>{
-    let result = await  StudentList.find({course:"c++"}).limit(5)
-    console.log(result)
-   }
+  // const getData=async ()=>{
+  //   let result = await  StudentList.find({course:"c++"}).limit(5)
+  //   console.log(result)
+  //  }
 
 
+  //operators comparision
+  // https://www.w3schools.com/mongodb/mongodb_query_operators.php
+
+  // const getData=async ()=>{
+
+  //   let result = await  StudentList.find({course:{$nin:["java","c++"]}})
+  //   console.log(result)
+  //  }
+
+
+//  logical Operators 
+// and
+// const getData=async ()=>{
+//    let result = await  StudentList.find({$and:[{course:"c++"},{score:{$gte:65}}]})
+//     console.log(result)
+//    }
+
+// logical op OR
+   const getData=async ()=>{
+    let result = await  StudentList.find({$or:[{course:"c++"},{score:{$gte:65}}]})
+     console.log(result)
+    }
+ 
 
    getData()
