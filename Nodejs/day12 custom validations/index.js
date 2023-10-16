@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const validator=require("validator");
 
 mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
   .then(() => console.log('data base connected Connected!'))
@@ -17,7 +17,17 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
             trim:true,
             maxLength:10
         },
-        email:String,
+        email:{
+          type:String,
+          validate(value){
+
+            if(!validator.isEmail(value))
+            {
+              throw new Error(" the data entered is not email")
+            }
+
+          }
+        },
         mobile:Number,
         course:{
             type:String,
@@ -106,8 +116,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
     // })
     const std5=new StudentList({
      
-      name:"gomesh",
-      email:"pk@gmial.com",
+      name:"heromesh",
+      email:'pk@gmom.co',
       mobile:234541344,
       course:"java",
       status:true,
@@ -121,3 +131,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/liveWire')
 
 
     addData()
+
+    ///https://mongoosejs.com/docs/schematypes.html
+
