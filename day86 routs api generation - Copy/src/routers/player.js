@@ -1,12 +1,6 @@
 const express= require("express");
-const router = new express.Router();
-
-router.get("/",(req,res)=>{
-    res.send("this is new homw page")
-})
-
-
-
+const router= new express.Router();
+const Player=require("../models/players");
 //this will create a new Student
 router.post("/players", async (req,res)=>{
     // console.log(req.body)
@@ -70,4 +64,4 @@ router.delete("/players/:id",async(req,res)=>{
         res.status(404).send(error)
     }
     })
- module.exports=router;
+ module.exports=router
